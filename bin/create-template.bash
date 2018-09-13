@@ -8,8 +8,8 @@ exec 2> ${log_file}; set -xv
 source ./config.ini &> /dev/null
 # ------------------------------------------------------------------------------
 # ネストされたテンプレートをデプロイ
-#aws s3 cp ../src/kinesis-firehose-s3-nested-stack.yaml s3://${S3_BUCKET_NAME}/${PATH_TO_OBJECT}/
-#[ $? -ne 0 ] && exit 1
+aws s3 cp ../src/kinesis-firehose-s3-nested-stack.yaml s3://${S3_BUCKET_NAME}/${PATH_TO_OBJECT}/
+[ $? -ne 0 ] && exit 1
 # ------------------------------------------------------------------------------
 # テンプレートを作成
 [ ! -d ../dist ] && mkdir ../dist
